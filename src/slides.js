@@ -171,7 +171,7 @@ export const slides = [
       `).join("")}
     </div>
 
-    <div class="grid grid-cols-3 gap-6 mb-6">
+    <div class="grid grid-cols-3 gap-6 mb-8">
       ${[
         ["The 2\u20133% Tax", "~95% of interchange goes back as cashback, points & miles.", "Agents don't earn rewards. For machine-to-machine payments, this is <span style=\"color:var(--rose)\">pure overhead</span>."],
         ["Chargebacks at Scale", "At micro-payment volume, <strong>merchant protection matters more</strong> than consumer protection.", "Merchants flooded with agent micro-payments can't economically fight disputes."],
@@ -185,7 +185,7 @@ export const slides = [
       `).join("")}
     </div>
 
-    <div class="card" style="background:var(--bg-alt)">
+    <div class="card" style="margin-top:24px;background:var(--bg-alt)">
       <p class="text-[14px]" style="color:var(--text-2)">The dispute problem is already visible. It's so broken that <span class="font-semibold" style="color:var(--text)">Visa and Google had to build entirely new protocols</span> to patch it.</p>
     </div>
 
@@ -199,7 +199,7 @@ export const slides = [
     <h2 class="text-4xl font-bold mb-2">New Protocols Prove It's Broken</h2>
     <p class="text-base mb-8" style="color:var(--text-2)">If the old system worked for agents, <span style="color:var(--text)">these wouldn't need to exist</span>.</p>
 
-    <div class="grid grid-cols-2 gap-6 mb-6">
+    <div class="grid grid-cols-2 gap-6 mb-8">
       <div class="card" style="background:var(--bg-alt)">
         <div class="flex items-center gap-3 mb-3">
           <span class="badge" style="background:var(--surface);color:var(--text);border:1px solid var(--border)">VISA</span>
@@ -219,7 +219,7 @@ export const slides = [
       </div>
     </div>
 
-    <div class="card-glow">
+    <div class="card-glow" style="margin-top:24px">
       <p class="text-[14px]"><span class="font-bold" style="color:var(--cyan)">These are patches on a legacy system.</span> <span style="color:var(--text-2)">Stablecoins don't need patches &mdash; irreversible payments protect merchants by default. Escrow handles disputes. No 5-party overhead.</span></p>
     </div>
 
@@ -258,7 +258,7 @@ export const slides = [
 
     <h2 class="text-4xl font-bold mb-10">Cards Are Catching Up. Crypto Is Native.</h2>
 
-    <div class="flex gap-6 mb-6">
+    <div class="flex gap-6 mb-8">
       <!-- Cards column -->
       <div class="flex-1 card flex flex-col" style="background:var(--bg-alt)">
         <p class="text-xl font-bold mb-5" style="color:var(--text-2)">Cards: Patching Legacy</p>
@@ -284,7 +284,7 @@ export const slides = [
       </div>
     </div>
 
-    <div class="card text-center" style="background:var(--cyan-soft)">
+    <div class="card text-center" style="margin-top:24px;background:var(--cyan-soft)">
       <p class="text-base" style="color:var(--text-2)">Cards are playing catch-up. <span class="font-semibold" style="color:var(--cyan)">Crypto doesn't need patches &mdash; it's the native rail.</span></p>
     </div>
 
@@ -314,7 +314,7 @@ export const slides = [
 
     <h2 class="text-4xl font-bold mb-8">How It All Fits Together</h2>
 
-    <div class="flex gap-5 mb-6">
+    <div class="flex gap-5 mb-8">
       ${[
         ["ERC-8004", "Trust &amp; Discovery", "Identity, reputation, validation. Find services, assess reliability, verify claims.", "var(--purple-soft)", "var(--purple)"],
         ["x402", "Payment", "HTTP-native micropayments. Pay per request, settle on-chain in ~1s.", "var(--cyan-soft)", "var(--cyan)"],
@@ -330,7 +330,7 @@ export const slides = [
       `).join("")}
     </div>
 
-    <div class="card" style="background:var(--bg-alt)">
+    <div class="card" style="margin-top:24px;background:var(--bg-alt)">
       <div class="flex items-center justify-center gap-3 text-[13px]">
         <span class="font-bold" style="color:var(--purple)">Discover (8004)</span>
         <span style="color:var(--text-3)">&rarr;</span>
@@ -362,7 +362,7 @@ export const slides = [
     <h2 class="text-5xl font-black mb-3">You're Reading 8004 Wrong</h2>
     <p class="text-base mb-8" style="color:var(--text-2)">Backed by <strong>Google, Coinbase, MetaMask, Ethereum Foundation</strong>. Competitors collaborating on infrastructure.</p>
 
-    <div class="flex gap-6 mb-6">
+    <div class="flex gap-6 mb-8">
       <div class="card flex-1" style="background:var(--rose-soft)">
         <p class="mono text-[10px] mb-2" style="color:var(--rose)">What people think</p>
         <p class="text-[15px] font-semibold mb-2">"It's an agent registry"</p>
@@ -375,7 +375,7 @@ export const slides = [
       </div>
     </div>
 
-    <div class="card" style="background:var(--bg-alt)">
+    <div class="card" style="margin-top:24px;background:var(--bg-alt)">
       <p class="mono text-[10px] mb-2" style="color:var(--text-3)">The registration file accepts</p>
       <div class="flex flex-wrap gap-2">
         ${["A2A endpoints", "MCP tool servers", "Plain HTTP APIs", "ENS names", "DIDs", "OASF endpoints", "Email addresses"].map(t => `
@@ -557,7 +557,7 @@ export const slides = [
     <h2 class="text-4xl font-bold mb-2">Validation Registry</h2>
     <p class="text-base mb-10" style="color:var(--text-2)">SecurityAudit claims it uses GPT-4. How do you <span class="font-semibold" style="color:var(--purple)">prove</span> that?</p>
 
-    <div class="grid grid-cols-3 gap-6 mb-6">
+    <div class="grid grid-cols-3 gap-6 mb-8">
       ${[
         ["TEE Attestations", "Trusted Execution Environment. Hardware proves what code is actually running."],
         ["zkML Proofs", "Zero-knowledge proofs verify which model produced an output without revealing weights."],
@@ -570,7 +570,7 @@ export const slides = [
       `).join("")}
     </div>
 
-    <div class="flex items-center gap-6 card" style="background:var(--bg-alt)">
+    <div class="flex items-center gap-6 card" style="margin-top:24px;background:var(--bg-alt)">
       <p class="text-lg line-through" style="color:var(--rose)">"Trust me bro"</p>
       <div class="w-10 h-[2px]" style="background:linear-gradient(90deg,var(--rose),var(--cyan))"></div>
       <p class="text-lg font-bold" style="color:var(--cyan)">"Verify cryptographically"</p>
@@ -592,7 +592,7 @@ export const slides = [
     <h2 class="text-4xl font-bold mb-2">The Payment Layer HTTP Always Needed</h2>
     <p class="text-base mb-6" style="color:var(--text-2)">x402 activates the dormant HTTP 402 status code into a real on-chain payment protocol. Zero fees, ~1s settlement, no accounts required.</p>
 
-    <div class="flex gap-6 mb-6">
+    <div class="flex gap-6 mb-8">
       <!-- Flow -->
       <div class="flex-1">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">Protocol flow</p>
@@ -640,7 +640,7 @@ export const slides = [
       </div>
     </div>
 
-    <div class="card" style="background:var(--bg-alt)">
+    <div class="card" style="margin-top:24px;background:var(--bg-alt)">
       <p class="text-[12px]" style="color:var(--text-3)"><strong style="color:var(--text-2)">x402 + ERC-8183 are complementary.</strong> x402 is the HTTP interface &mdash; agents and services pay per request like standard API calls. ERC-8183 is the settlement layer underneath &mdash; escrow, evaluator attestation, deterministic outcomes for complex jobs. x402 also includes <strong>Bazaar</strong>, a discovery layer for finding x402-compatible endpoints and MCP tools.</p>
     </div>
 
@@ -660,7 +660,7 @@ export const slides = [
     <h2 class="text-4xl font-bold mb-2">The Commerce Layer, Not a Payment Protocol</h2>
     <p class="text-base mb-8" style="color:var(--text-2)">A payment moves money. Commerce is everything around it that makes it <strong>trustworthy</strong>.</p>
 
-    <div class="flex gap-6 mb-6">
+    <div class="flex gap-6 mb-8">
       <div class="card flex-1" style="background:var(--rose-soft)">
         <p class="mono text-[10px] mb-2" style="color:var(--rose)">Raw payment</p>
         <p class="text-[14px]" style="color:var(--text-2)">Send tokens and hope for the best. No record of what was agreed. No escrow. No evaluation. No recourse.</p>
@@ -671,7 +671,7 @@ export const slides = [
       </div>
     </div>
 
-    <div class="card" style="background:var(--bg-alt)">
+    <div class="card" style="margin-top:24px;background:var(--bg-alt)">
       <p class="text-[13px]" style="color:var(--text-2)"><strong>Why on-chain?</strong> A smart contract is the neutral enforcer &mdash; public, immutable, owned by no one. Every completed job produces portable, verifiable history that feeds reputation. Without on-chain settlement, there's no verifiable history. Without that, every agent interaction starts from zero trust.</p>
     </div>
 
@@ -689,11 +689,11 @@ export const slides = [
 
     <h2 class="text-4xl font-bold mb-8">The Job</h2>
 
-    <div class="flex gap-8 mb-6">
+    <div class="flex gap-8 mb-8">
       <!-- Three parties -->
       <div class="flex-1">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-4" style="color:var(--text-3)">Three parties, defined by wallet address</p>
-        <div class="space-y-3">
+        <div class="flex flex-col" style="gap:16px">
           ${[
             ["&#128100;", "Client", "Creates job, funds escrow, reclaims on expiry"],
             ["&#9881;&#65039;", "Provider", "Does the work, submits deliverable on-chain"],
@@ -757,7 +757,7 @@ export const slides = [
       <div class="flex-1">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">Hooks: modular extensibility</p>
         <p class="text-[13px] mb-4" style="color:var(--text-2)">Optional smart contract attached at job creation. Receives callbacks before/after each action. Core stays minimal, hooks add the logic.</p>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-4">
           ${[
             ["Service jobs", "No hook needed &mdash; baseline escrow flow"],
             ["Fund transfers", "Two-way capital flow (swaps, yield, rebalancing)"],
@@ -777,7 +777,7 @@ export const slides = [
       <!-- Symbiosis -->
       <div class="w-[340px] flex-shrink-0">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">The 8004 &harr; 8183 loop</p>
-        <div class="space-y-3 mb-4">
+        <div class="space-y-4 mb-4">
           ${[
             ["&#128270;", "Discovery (8004)", "Agent finds a service"],
             ["&#128176;", "Commerce (8183)", "Job created, escrow funded"],
@@ -816,7 +816,7 @@ export const slides = [
     <div class="flex gap-6 mb-6">
       <div class="flex-1">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">The problem for agents</p>
-        <div class="space-y-3">
+        <div class="space-y-4">
           <div class="card" style="padding:14px 18px;background:var(--rose-soft)">
             <p class="text-[12px] font-bold mb-1" style="color:var(--rose)">API keys &amp; bearer tokens don't work</p>
             <p class="text-[11px]" style="color:var(--text-2)">Agents can't safely store secrets. Tokens leak. Credentials get shared across contexts. Every leaked key is an open door.</p>
@@ -830,7 +830,7 @@ export const slides = [
 
       <div class="flex-1">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--cyan)">ERC-8128: per-request Ethereum signatures</p>
-        <div class="space-y-3">
+        <div class="space-y-4">
           <div class="card-glow" style="padding:14px 18px">
             <p class="text-[12px] font-bold mb-1">Every HTTP call is self-authenticating</p>
             <p class="text-[11px]" style="color:var(--text-2)">Built on RFC 9421. Agent signs each request with its Ethereum key. Server verifies. No stored credentials, no sessions, stateless.</p>
@@ -984,7 +984,7 @@ export const slides = [
     <div class="flex gap-6 mb-6">
       <div class="flex-1">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">How stealth addresses work</p>
-        <div class="space-y-3">
+        <div class="space-y-4">
           <div class="card" style="padding:14px 18px;background:var(--bg-alt)">
             <p class="text-[12px] font-bold mb-1">One-time addresses</p>
             <p class="text-[11px]" style="color:var(--text-2)">Each payment generates a fresh address derived from elliptic curve math. Sender &amp; receiver are unlinkable on-chain. Non-interactive &mdash; no back-and-forth needed.</p>
@@ -998,7 +998,7 @@ export const slides = [
 
       <div class="flex-1">
         <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--cyan)">Why agents will love this</p>
-        <div class="space-y-3">
+        <div class="space-y-4">
           <div class="card-glow" style="padding:14px 18px">
             <p class="text-[12px] font-bold mb-1">Privacy</p>
             <p class="text-[11px]" style="color:var(--text-2)">Unlinkable by default. An agent's operator doesn't want every transaction publicly traceable. Competitors can't map spending patterns.</p>
