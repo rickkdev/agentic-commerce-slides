@@ -52,7 +52,7 @@ export const slides = [
       `).join("")}
     </div>
 
-    <span class="slide-num">02 / 22</span>
+    <span class="slide-num">02 / 27</span>
   </div>`,
 
   /* =============================================
@@ -69,7 +69,7 @@ export const slides = [
     <div class="mt-6 w-14 h-[2px]" style="background:linear-gradient(90deg,transparent,var(--cyan-light),transparent)"></div>
     <p class="mt-6 text-lg font-light" style="color:var(--text-3)">The opportunity & what it means</p>
 
-    <span class="slide-num">03 / 22</span>
+    <span class="slide-num">03 / 27</span>
   </div>`,
 
   /* SLIDE 4 — Use Cases: Existing + New */
@@ -127,7 +127,7 @@ export const slides = [
     </div>
     </div>
 
-    <span class="slide-num">04 / 22</span>
+    <span class="slide-num">04 / 27</span>
   </div>`,
 
   /* =============================================
@@ -144,60 +144,37 @@ export const slides = [
     <div class="mt-6 w-14 h-[2px]" style="background:linear-gradient(90deg,transparent,var(--cyan-light),transparent)"></div>
     <p class="mt-6 text-lg font-light" style="color:var(--text-3)">How agentic payments look on each rail</p>
 
-    <span class="slide-num">05 / 22</span>
+    <span class="slide-num">05 / 27</span>
   </div>`,
 
-  /* SLIDE 6 — The 5-Party System */
-  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
-    <div class="topline"></div>
-
-    <h2 class="text-4xl font-bold mb-2">How Card Payments Actually Work</h2>
-    <p class="text-base mb-10" style="color:var(--text-2)">Every credit card transaction passes through a 5-party system.</p>
-
-    <div class="flex items-center gap-4 mb-10">
-      ${[
-        ["&#128100;", "Cardholder", "You (or your agent)"],
-        ["&#127978;", "Merchant", "Seller / service"],
-        ["&#128179;", "Acquirer", "Merchant's bank"],
-        ["&#128179;", "Card Network", "Visa / Mastercard"],
-        ["&#127974;", "Issuer", "Cardholder's bank"],
-      ].map(([icon, name, sub], i, arr) => `
-        <div class="card flex-1 text-center" style="padding:16px 10px">
-          <p class="text-2xl mb-2">${icon}</p>
-          <p class="mono text-[10px] font-bold" style="color:var(--text-2)">${name}</p>
-          <p class="text-[10px] mt-1" style="color:var(--text-3)">${sub}</p>
-        </div>
-        ${i < arr.length - 1 ? '<div class="mono text-sm flex-shrink-0" style="color:var(--text-3)">&rarr;</div>' : ''}
-      `).join("")}
-    </div>
-
-    <div class="grid grid-cols-3 gap-5">
-      ${[
-        ["2\u20133% interchange", "~95% returned as cashback & rewards. Agents don't earn rewards \u2014 pure overhead for machines."],
-        ["Chargebacks", "Consumer protection for humans. At micro-payment scale, merchants can't economically fight disputes."],
-        ["Settlement", "Auth is sub-second, but actual settlement takes 1\u20133 days through the 5-party chain."],
-      ].map(([title, desc]) => `
-        <div class="card" style="padding:16px 20px;background:var(--bg-alt)">
-          <p class="mono text-[11px] mb-1 font-semibold">${title}</p>
-          <p class="text-[12px] leading-relaxed" style="color:var(--text-2)">${desc}</p>
-        </div>
-      `).join("")}
-    </div>
-
-    <span class="slide-num">06 / 22</span>
-  </div>`,
-
-  /* SLIDE 7 — Where Cards Fall Short */
+  /* SLIDE 6 — Where Cards Fall Short */
   `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
     <div class="topline"></div>
 
     <h2 class="text-4xl font-bold mb-2">Where Cards Fall Short for Agents</h2>
-    <p class="text-base mb-8" style="color:var(--text-2)">The 5-party system wasn't built for machines transacting at scale.</p>
+    <p class="text-base mb-6" style="color:var(--text-2)">Every card transaction passes through a 5-party system that wasn't built for machines.</p>
+
+    <!-- 5-party flow compact -->
+    <div class="flex items-center justify-center gap-1 mb-8">
+      ${[
+        ["&#128100;", "Cardholder"],
+        ["&#127978;", "Merchant"],
+        ["&#128179;", "Acquirer"],
+        ["&#128179;", "Network"],
+        ["&#127974;", "Issuer"],
+      ].map(([icon, name], i, arr) => `
+        <div class="flex items-center gap-1">
+          <span class="text-base">${icon}</span>
+          <span class="mono text-[10px] font-semibold" style="color:var(--text-2)">${name}</span>
+        </div>
+        ${i < arr.length - 1 ? '<span class="mono text-[10px]" style="color:var(--text-3)">&rarr;</span>' : ''}
+      `).join("")}
+    </div>
 
     <div class="grid grid-cols-3 gap-6 mb-6">
       ${[
         ["The 2\u20133% Tax", "~95% of interchange goes back as cashback, points & miles.", "Agents don't earn rewards. For machine-to-machine payments, this is <span style=\"color:var(--rose)\">pure overhead</span>."],
-        ["Chargebacks at Scale", "At micro-payment volume, <strong>merchant protection matters more</strong> than consumer protection.", "A merchant flooded with thousands of agent micro-payments can't economically fight disputes."],
+        ["Chargebacks at Scale", "At micro-payment volume, <strong>merchant protection matters more</strong> than consumer protection.", "Merchants flooded with agent micro-payments can't economically fight disputes."],
         ["Rigid Trust Model", "Always requires: human &rarr; KYC'd bank account &rarr; delegate to agent.", "Like a parent opening a child's card. Every agent is leashed to a human identity."],
       ].map(([title, p1, p2]) => `
         <div class="card" style="background:var(--rose-soft)">
@@ -212,7 +189,7 @@ export const slides = [
       <p class="text-[14px]" style="color:var(--text-2)">The dispute problem is already visible. It's so broken that <span class="font-semibold" style="color:var(--text)">Visa and Google had to build entirely new protocols</span> to patch it.</p>
     </div>
 
-    <span class="slide-num">07 / 22</span>
+    <span class="slide-num">06 / 27</span>
   </div>`,
 
   /* SLIDE 8 — New Protocols Prove It's Broken */
@@ -246,7 +223,7 @@ export const slides = [
       <p class="text-[14px]"><span class="font-bold" style="color:var(--cyan)">These are patches on a legacy system.</span> <span style="color:var(--text-2)">Stablecoins don't need patches &mdash; irreversible payments protect merchants by default. Escrow handles disputes. No 5-party overhead.</span></p>
     </div>
 
-    <span class="slide-num">08 / 22</span>
+    <span class="slide-num">07 / 27</span>
   </div>`,
 
   /* SLIDE 9 — Why Crypto Wins for Agents */
@@ -272,7 +249,7 @@ export const slides = [
       `).join("")}
     </div>
 
-    <span class="slide-num">09 / 22</span>
+    <span class="slide-num">08 / 27</span>
   </div>`,
 
   /* SLIDE 10 — Cards Are Catching Up, Crypto Is Native */
@@ -311,7 +288,7 @@ export const slides = [
       <p class="text-base" style="color:var(--text-2)">Cards are playing catch-up. <span class="font-semibold" style="color:var(--cyan)">Crypto doesn't need patches &mdash; it's the native rail.</span></p>
     </div>
 
-    <span class="slide-num">10 / 22</span>
+    <span class="slide-num">09 / 27</span>
   </div>`,
 
   /* =============================================
@@ -328,10 +305,51 @@ export const slides = [
     <div class="mt-6 w-14 h-[2px]" style="background:linear-gradient(90deg,transparent,var(--cyan-light),transparent)"></div>
     <p class="mt-6 text-lg font-light" style="color:var(--text-3)">ERC-8004, x402, escrow & the protocols behind agent payments</p>
 
-    <span class="slide-num">11 / 22</span>
+    <span class="slide-num">10 / 27</span>
   </div>`,
 
-  /* SLIDE 12 — ERC-8004 Intro */
+  /* SLIDE — The Full Stack Overview */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+
+    <h2 class="text-4xl font-bold mb-8">How It All Fits Together</h2>
+
+    <div class="flex gap-5 mb-6">
+      ${[
+        ["ERC-8004", "Trust &amp; Discovery", "Identity, reputation, validation. Find services, assess reliability, verify claims.", "var(--purple-soft)", "var(--purple)"],
+        ["x402", "Payment", "HTTP-native micropayments. Pay per request, settle on-chain in ~1s.", "var(--cyan-soft)", "var(--cyan)"],
+        ["ERC-8183", "Commerce", "The Job primitive. Escrow, evaluator attestation, deterministic settlement.", "var(--purple-soft)", "var(--purple)"],
+        ["ERC-8128", "Authentication", "Per-request Ethereum signatures. Same key across the entire stack.", "var(--bg-alt)", "var(--text)"],
+        ["ERC-5564", "Privacy", "Stealth addresses. Unlinkable payments, trivial for machines.", "var(--bg-alt)", "var(--text)"],
+      ].map(([erc, role, desc, bg, color]) => `
+        <div class="card flex-1" style="padding:16px 14px;background:${bg}">
+          <p class="mono text-[10px] font-bold mb-1" style="color:${color}">${erc}</p>
+          <p class="text-[13px] font-bold mb-2">${role}</p>
+          <p class="text-[10px] leading-relaxed" style="color:var(--text-2)">${desc}</p>
+        </div>
+      `).join("")}
+    </div>
+
+    <div class="card" style="background:var(--bg-alt)">
+      <div class="flex items-center justify-center gap-3 text-[13px]">
+        <span class="font-bold" style="color:var(--purple)">Discover (8004)</span>
+        <span style="color:var(--text-3)">&rarr;</span>
+        <span class="font-bold">Authenticate (8128)</span>
+        <span style="color:var(--text-3)">&rarr;</span>
+        <span class="font-bold" style="color:var(--cyan)">Pay (x402)</span>
+        <span style="color:var(--text-3)">&rarr;</span>
+        <span class="font-bold" style="color:var(--purple)">Settle (8183)</span>
+        <span style="color:var(--text-3)">&rarr;</span>
+        <span class="font-bold" style="color:var(--purple)">Build Reputation (8004)</span>
+        <span style="color:var(--text-3)">&rarr; &#128257;</span>
+      </div>
+      <p class="text-[11px] text-center mt-3" style="color:var(--text-3)">One Ethereum address flows through every layer. Privacy (5564) applies at any payment step. No separate credentials, no fragmented identity.</p>
+    </div>
+
+    <span class="slide-num">11 / 27</span>
+  </div>`,
+
+  /* SLIDE 12 — You're Reading 8004 Wrong */
   `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
     <div class="topline"></div>
     <div class="orb" style="width:500px;height:500px;background:var(--purple);bottom:-200px;right:-100px;opacity:0.1"></div>
@@ -341,24 +359,67 @@ export const slides = [
       <span class="mono text-[10px]" style="color:var(--text-3)">Ethereum Standard</span>
     </div>
 
-    <h2 class="text-5xl font-black mb-3">The Trust Layer</h2>
-    <p class="text-base mb-12" style="color:var(--text-2)">Backed by <strong>Google, Coinbase, MetaMask, Ethereum Foundation</strong>. Competitors collaborating on infrastructure.</p>
+    <h2 class="text-5xl font-black mb-3">You're Reading 8004 Wrong</h2>
+    <p class="text-base mb-8" style="color:var(--text-2)">Backed by <strong>Google, Coinbase, MetaMask, Ethereum Foundation</strong>. Competitors collaborating on infrastructure.</p>
 
-    <div class="grid grid-cols-3 gap-6">
-      ${[
-        ["&#9741;", "Identity Registry", "On-chain agent IDs"],
-        ["&#9733;", "Reputation Registry", "Payment-verified reviews"],
-        ["&#9889;", "Validation Registry", "Cryptographic proof of claims"],
-      ].map(([icon, title, sub]) => `
-        <div class="card text-center" style="background:var(--purple-soft)">
-          <div class="w-12 h-12 mx-auto mb-4 rounded-xl flex items-center justify-center text-2xl" style="background:white;color:var(--purple)">${icon}</div>
-          <p class="text-lg font-semibold">${title}</p>
-          <p class="text-[11px] mt-2" style="color:var(--text-3)">${sub}</p>
-        </div>
-      `).join("")}
+    <div class="flex gap-6 mb-6">
+      <div class="card flex-1" style="background:var(--rose-soft)">
+        <p class="mono text-[10px] mb-2" style="color:var(--rose)">What people think</p>
+        <p class="text-[15px] font-semibold mb-2">"It's an agent registry"</p>
+        <p class="text-[13px]" style="color:var(--text-2)">AI agents discover other AI agents. ERC-20 for agents. The end.</p>
+      </div>
+      <div class="card-glow flex-1">
+        <p class="mono text-[10px] mb-2" style="color:var(--cyan)">What the spec actually says</p>
+        <p class="text-[15px] font-semibold mb-2">"Universal trust infrastructure"</p>
+        <p class="text-[13px]" style="color:var(--text-2)">Discover, choose &amp; interact with <strong>any service</strong> across organizational boundaries without pre-existing trust.</p>
+      </div>
     </div>
 
-    <span class="slide-num">12 / 22</span>
+    <div class="card" style="background:var(--bg-alt)">
+      <p class="mono text-[10px] mb-2" style="color:var(--text-3)">The registration file accepts</p>
+      <div class="flex flex-wrap gap-2">
+        ${["A2A endpoints", "MCP tool servers", "Plain HTTP APIs", "ENS names", "DIDs", "OASF endpoints", "Email addresses"].map(t => `
+          <span class="mono text-[10px] px-3 py-1 rounded-full" style="background:var(--purple-soft);color:var(--purple)">${t}</span>
+        `).join("")}
+      </div>
+    </div>
+
+    <span class="slide-num">12 / 27</span>
+  </div>`,
+
+  /* SLIDE 13 — Three Registries as Generic Primitives */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-8004</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Three Generic Primitives</span>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-8">The Registries Work for Everything</h2>
+
+    <div class="grid grid-cols-3 gap-6">
+      <div class="card" style="background:var(--purple-soft)">
+        <div class="w-10 h-10 mb-4 rounded-xl flex items-center justify-center text-xl" style="background:white;color:var(--purple)">&#9741;</div>
+        <p class="text-lg font-semibold mb-2">Identity Registry</p>
+        <p class="text-[13px] mb-3" style="color:var(--text-2)">ERC-721 token + registration file. Describes what something <strong>is</strong>, what it <strong>does</strong>, and where to <strong>reach</strong> it.</p>
+        <p class="text-[12px] italic" style="color:var(--text-3)">Oracles, DeFi services, MCP tools, data providers &mdash; not just agents.</p>
+      </div>
+      <div class="card" style="background:var(--purple-soft)">
+        <div class="w-10 h-10 mb-4 rounded-xl flex items-center justify-center text-xl" style="background:white;color:var(--purple)">&#9733;</div>
+        <p class="text-lg font-semibold mb-2">Reputation Registry</p>
+        <p class="text-[13px] mb-3" style="color:var(--text-2)">On-chain feedback with generic value/tags. Tracks <strong>reachable</strong>, <strong>uptime</strong>, <strong>responseTime</strong>, <strong>successRate</strong>.</p>
+        <p class="text-[12px] italic" style="color:var(--text-3)">Half the default metrics are infrastructure metrics you'd track for any API.</p>
+      </div>
+      <div class="card" style="background:var(--purple-soft)">
+        <div class="w-10 h-10 mb-4 rounded-xl flex items-center justify-center text-xl" style="background:white;color:var(--purple)">&#9889;</div>
+        <p class="text-lg font-semibold mb-2">Validation Registry</p>
+        <p class="text-[13px] mb-3" style="color:var(--text-2)">Any registered entity requests verification. Any validator contract responds. TEE, zkML, staking.</p>
+        <p class="text-[12px] italic" style="color:var(--text-3)">General computation verification &mdash; works for oracles, compute, data pipelines.</p>
+      </div>
+    </div>
+
+    <span class="slide-num">13 / 27</span>
   </div>`,
 
   /* SLIDE 13 — Identity Registry */
@@ -405,7 +466,7 @@ export const slides = [
       </div>
     </div>
 
-    <span class="slide-num">13 / 22</span>
+    <span class="slide-num">14 / 27</span>
   </div>`,
 
   /* SLIDE 14 — Reputation Registry */
@@ -453,7 +514,7 @@ export const slides = [
       </div>
     </div>
 
-    <span class="slide-num">14 / 22</span>
+    <span class="slide-num">15 / 27</span>
   </div>`,
 
   /* SLIDE 15 — Can You Game It? */
@@ -480,7 +541,7 @@ export const slides = [
 
     <p class="mt-8 text-[14px]" style="color:var(--text-3)">Everything is on-chain. Blockchain analytics makes sybil attacks <span class="font-semibold" style="color:var(--text-2)">visible</span>.</p>
 
-    <span class="slide-num">15 / 22</span>
+    <span class="slide-num">16 / 27</span>
   </div>`,
 
   /* SLIDE 16 — Validation Registry */
@@ -515,64 +576,328 @@ export const slides = [
       <p class="text-lg font-bold" style="color:var(--cyan)">"Verify cryptographically"</p>
     </div>
 
-    <span class="slide-num">16 / 22</span>
+    <span class="slide-num">17 / 27</span>
   </div>`,
 
-  /* SLIDE 17 — x402 Protocol Placeholder */
+  /* SLIDE 17 — x402: Internet-Native Payments */
   `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
     <div class="topline"></div>
     <div class="orb" style="width:400px;height:400px;background:var(--cyan-light);top:-150px;right:-100px"></div>
 
     <div class="flex items-center gap-3 mb-4">
       <span class="badge" style="background:var(--cyan-soft);color:var(--cyan);border:1px solid var(--border)">x402</span>
-      <span class="mono text-[10px]" style="color:var(--text-3)">Payment Protocol</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Open Standard &mdash; Apache 2.0</span>
     </div>
 
-    <h2 class="text-4xl font-bold mb-8">x402 Protocol</h2>
-    <p class="text-xl italic" style="color:var(--text-3)">[ Content placeholder &mdash; paste your x402 details ]</p>
+    <h2 class="text-4xl font-bold mb-2">The Payment Layer HTTP Always Needed</h2>
+    <p class="text-base mb-6" style="color:var(--text-2)">x402 activates the dormant HTTP 402 status code into a real on-chain payment protocol. Zero fees, ~1s settlement, no accounts required.</p>
 
-    <span class="slide-num">17 / 22</span>
-  </div>`,
+    <div class="flex gap-6 mb-6">
+      <!-- Flow -->
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">Protocol flow</p>
+        <div class="space-y-2">
+          ${[
+            ["1", "Client sends standard HTTP request"],
+            ["2", "Server responds 402 + payment requirements"],
+            ["3", "Client signs payment with wallet"],
+            ["4", "Client retries with PAYMENT-SIGNATURE header"],
+            ["5", "Server verifies, settles on-chain, returns response"],
+          ].map(([n, text]) => `
+            <div class="flex items-center gap-3">
+              <span class="mono text-[10px] font-bold w-5 h-5 rounded flex items-center justify-center flex-shrink-0" style="background:var(--cyan-soft);color:var(--cyan)">${n}</span>
+              <p class="text-[13px]" style="color:var(--text-2)">${text}</p>
+            </div>
+          `).join("")}
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2">
+          ${["Base", "Solana", "Polygon", "Avalanche", "Stellar", "Aptos", "Sei"].map(n => `
+            <span class="mono text-[9px] px-2 py-0.5 rounded" style="background:var(--bg-alt);color:var(--text-3)">${n}</span>
+          `).join("")}
+        </div>
+      </div>
 
-  /* SLIDE 18 — Additional Protocol Placeholder */
-  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
-    <div class="topline"></div>
-
-    <div class="flex items-center gap-3 mb-4">
-      <span class="badge" style="background:var(--surface);color:var(--text-2);border:1px solid var(--border)">PROTOCOL</span>
-      <span class="mono text-[10px]" style="color:var(--text-3)">Stack Component</span>
+      <!-- Five zeroes + ecosystem -->
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">Design principles</p>
+        <div class="space-y-2 mb-4">
+          ${[
+            ["Zero protocol fees", "Only nominal network gas"],
+            ["Zero wait", "Settlement at internet speed (~1s)"],
+            ["Zero friction", "No accounts, no personal info"],
+            ["Zero centralization", "Open standard, anyone can build"],
+            ["Zero restrictions", "Not tied to specific networks"],
+          ].map(([title, desc]) => `
+            <div class="flex items-start gap-2">
+              <span class="text-[11px] font-bold flex-shrink-0" style="color:var(--cyan)">&rsaquo;</span>
+              <p class="text-[12px]"><strong>${title}</strong> <span style="color:var(--text-3)">&mdash; ${desc}</span></p>
+            </div>
+          `).join("")}
+        </div>
+        <div class="card" style="padding:10px 16px;background:var(--bg-alt)">
+          <p class="text-[11px]" style="color:var(--text-3)">SDKs: TypeScript, Go, Python. Frameworks: Express, Hono, Next.js, Gin, FastAPI, Flask. Adopters include Stripe, AWS, Alchemy, Nansen, Vercel, Cloudflare.</p>
+        </div>
+      </div>
     </div>
 
-    <h2 class="text-4xl font-bold mb-8">[ Protocol Name ]</h2>
-    <p class="text-xl italic" style="color:var(--text-3)">[ Content placeholder &mdash; paste your protocol details ]</p>
-
-    <span class="slide-num">18 / 22</span>
-  </div>`,
-
-  /* SLIDE 19 — Privacy Placeholder */
-  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
-    <div class="topline"></div>
-    <div class="orb" style="width:400px;height:400px;background:var(--purple);top:-150px;right:-100px;opacity:0.08"></div>
-
-    <div class="flex items-center gap-3 mb-4">
-      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">PRIVACY</span>
-      <span class="mono text-[10px]" style="color:var(--text-3)">Agent Payment Privacy</span>
+    <div class="card" style="background:var(--bg-alt)">
+      <p class="text-[12px]" style="color:var(--text-3)"><strong style="color:var(--text-2)">x402 + ERC-8183 are complementary.</strong> x402 is the HTTP interface &mdash; agents and services pay per request like standard API calls. ERC-8183 is the settlement layer underneath &mdash; escrow, evaluator attestation, deterministic outcomes for complex jobs. x402 also includes <strong>Bazaar</strong>, a discovery layer for finding x402-compatible endpoints and MCP tools.</p>
     </div>
 
-    <h2 class="text-4xl font-bold mb-8">Privacy for Agent Payments</h2>
-    <p class="text-xl italic" style="color:var(--text-3)">[ Content placeholder &mdash; paste your privacy layer details ]</p>
-
-    <span class="slide-num">19 / 22</span>
+    <span class="slide-num">18 / 27</span>
   </div>`,
 
-  /* SLIDE 20 — Escrow Intro */
+  /* SLIDE 18 — ERC-8183: Not a Payment Protocol */
   `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
     <div class="topline"></div>
     <div class="orb" style="width:500px;height:500px;background:var(--cyan-light);bottom:-200px;right:-100px;opacity:0.1"></div>
 
     <div class="flex items-center gap-3 mb-4">
-      <span class="badge" style="background:var(--surface);color:var(--text-2);border:1px solid var(--border)">ESCROW</span>
-      <span class="mono text-[10px]" style="color:var(--text-3)">The Safety Net</span>
+      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-8183</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Virtuals Protocol + Ethereum Foundation dAI</span>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-2">The Commerce Layer, Not a Payment Protocol</h2>
+    <p class="text-base mb-8" style="color:var(--text-2)">A payment moves money. Commerce is everything around it that makes it <strong>trustworthy</strong>.</p>
+
+    <div class="flex gap-6 mb-6">
+      <div class="card flex-1" style="background:var(--rose-soft)">
+        <p class="mono text-[10px] mb-2" style="color:var(--rose)">Raw payment</p>
+        <p class="text-[14px]" style="color:var(--text-2)">Send tokens and hope for the best. No record of what was agreed. No escrow. No evaluation. No recourse.</p>
+      </div>
+      <div class="card-glow flex-1">
+        <p class="mono text-[10px] mb-2" style="color:var(--cyan)">ERC-8183 commerce</p>
+        <p class="text-[14px]" style="color:var(--text-2)">Specification &rarr; escrow &rarr; deliverable submission &rarr; evaluator attestation &rarr; deterministic settlement. All on-chain.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background:var(--bg-alt)">
+      <p class="text-[13px]" style="color:var(--text-2)"><strong>Why on-chain?</strong> A smart contract is the neutral enforcer &mdash; public, immutable, owned by no one. Every completed job produces portable, verifiable history that feeds reputation. Without on-chain settlement, there's no verifiable history. Without that, every agent interaction starts from zero trust.</p>
+    </div>
+
+    <span class="slide-num">19 / 27</span>
+  </div>`,
+
+  /* SLIDE 19 — The Job Primitive */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-8183</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">The Core Primitive</span>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-8">The Job</h2>
+
+    <div class="flex gap-8 mb-6">
+      <!-- Three parties -->
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-4" style="color:var(--text-3)">Three parties, defined by wallet address</p>
+        <div class="space-y-3">
+          ${[
+            ["&#128100;", "Client", "Creates job, funds escrow, reclaims on expiry"],
+            ["&#9881;&#65039;", "Provider", "Does the work, submits deliverable on-chain"],
+            ["&#9878;&#65039;", "Evaluator", "Attests completion or rejects &mdash; can be AI agent, ZK verifier, multisig, or DAO"],
+          ].map(([icon, role, desc]) => `
+            <div class="card flex items-start gap-3" style="padding:12px 18px">
+              <span class="text-lg flex-shrink-0">${icon}</span>
+              <div>
+                <p class="text-[13px] font-bold">${role}</p>
+                <p class="text-[11px]" style="color:var(--text-2)">${desc}</p>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+
+      <!-- State machine -->
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-4" style="color:var(--text-3)">Job lifecycle</p>
+        <div class="flex items-center gap-2 mb-6">
+          ${["Open", "Funded", "Submitted", "Terminal"].map((s, i, arr) => `
+            <span class="mono text-[11px] font-bold px-3 py-1.5 rounded-lg" style="background:${i === arr.length - 1 ? 'var(--cyan-soft);color:var(--cyan)' : 'var(--bg-alt);color:var(--text-2)'}">${s}</span>
+            ${i < arr.length - 1 ? '<span style="color:var(--text-3)">&rarr;</span>' : ''}
+          `).join("")}
+        </div>
+        <div class="space-y-2">
+          ${[
+            ["Completed", "Evaluator approves &rarr; funds released to provider", "var(--green)"],
+            ["Rejected", "Evaluator rejects &rarr; client refunded", "var(--rose)"],
+            ["Expired", "Deadline passes &rarr; client reclaims", "var(--text-3)"],
+          ].map(([state, desc, color]) => `
+            <div class="flex items-center gap-3">
+              <span class="mono text-[10px] font-bold w-20 flex-shrink-0" style="color:${color}">${state}</span>
+              <p class="text-[11px]" style="color:var(--text-2)">${desc}</p>
+            </div>
+          `).join("")}
+        </div>
+
+        <div class="mt-6 card" style="padding:12px 18px;background:var(--bg-alt)">
+          <p class="text-[11px]" style="color:var(--text-3)">Deliberately minimal. No negotiation, fee structures, or dispute resolution in the core &mdash; that's what hooks are for.</p>
+        </div>
+      </div>
+    </div>
+
+    <span class="slide-num">20 / 27</span>
+  </div>`,
+
+  /* SLIDE 20 — Hooks & Symbiosis with 8004 */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-8183</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Extensibility &amp; Ecosystem</span>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-6">Hooks + The 8004 Loop</h2>
+
+    <div class="flex gap-8">
+      <!-- Hooks -->
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">Hooks: modular extensibility</p>
+        <p class="text-[13px] mb-4" style="color:var(--text-2)">Optional smart contract attached at job creation. Receives callbacks before/after each action. Core stays minimal, hooks add the logic.</p>
+        <div class="grid grid-cols-2 gap-3">
+          ${[
+            ["Service jobs", "No hook needed &mdash; baseline escrow flow"],
+            ["Fund transfers", "Two-way capital flow (swaps, yield, rebalancing)"],
+            ["Bidding jobs", "Providers compete on price, cryptographic bid verification"],
+            ["Reputation-gated", "Query ERC-8004 before allowing actions"],
+            ["Privacy-preserving", "Submission contains ZKP or TEE reference"],
+            ["Underwriting", "Staked collateral, risk oracles, slashing on failure"],
+          ].map(([title, desc]) => `
+            <div class="card" style="padding:10px 14px;background:var(--bg-alt)">
+              <p class="text-[11px] font-bold mb-1">${title}</p>
+              <p class="text-[10px] leading-relaxed" style="color:var(--text-3)">${desc}</p>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+
+      <!-- Symbiosis -->
+      <div class="w-[340px] flex-shrink-0">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">The 8004 &harr; 8183 loop</p>
+        <div class="space-y-3 mb-4">
+          ${[
+            ["&#128270;", "Discovery (8004)", "Agent finds a service"],
+            ["&#128176;", "Commerce (8183)", "Job created, escrow funded"],
+            ["&#11088;", "Reputation (8004)", "Completion feeds on-chain history"],
+            ["&#128200;", "Better Discovery", "Higher rep = more work"],
+          ].map(([icon, title, desc], i, arr) => `
+            <div class="card flex items-start gap-3" style="padding:10px 16px;background:var(--purple-soft)">
+              <span class="text-base flex-shrink-0">${icon}</span>
+              <div>
+                <p class="text-[12px] font-bold" style="color:var(--purple)">${title}</p>
+                <p class="text-[10px]" style="color:var(--text-2)">${desc}</p>
+              </div>
+            </div>
+            ${i < arr.length - 1 ? '<div class="flex justify-center"><span class="text-[10px]" style="color:var(--text-3)">&darr;</span></div>' : ''}
+          `).join("")}
+        </div>
+        <p class="text-[11px] italic" style="color:var(--text-3)">Neither standard is complete without the other. Identity without commerce is an empty profile. Commerce without reputation starts from zero trust.</p>
+      </div>
+    </div>
+
+    <span class="slide-num">21 / 27</span>
+  </div>`,
+
+  /* SLIDE — ERC-8128: The Authentication Layer */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-8128</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Slice.so &mdash; HTTP Authentication</span>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-2">The Missing Auth Layer</h2>
+    <p class="text-base mb-6" style="color:var(--text-2)">x402 lets agents <strong>pay</strong> for services. ERC-8004 lets agents <strong>discover</strong> services. But how does a service know <strong>who's calling</strong>?</p>
+
+    <div class="flex gap-6 mb-6">
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">The problem for agents</p>
+        <div class="space-y-3">
+          <div class="card" style="padding:14px 18px;background:var(--rose-soft)">
+            <p class="text-[12px] font-bold mb-1" style="color:var(--rose)">API keys &amp; bearer tokens don't work</p>
+            <p class="text-[11px]" style="color:var(--text-2)">Agents can't safely store secrets. Tokens leak. Credentials get shared across contexts. Every leaked key is an open door.</p>
+          </div>
+          <div class="card" style="padding:14px 18px;background:var(--rose-soft)">
+            <p class="text-[12px] font-bold mb-1" style="color:var(--rose)">Sessions don't fit machines</p>
+            <p class="text-[11px]" style="color:var(--text-2)">SIWE gives you a session token after login. But agents don't "log in" &mdash; they make thousands of stateless requests across many services.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--cyan)">ERC-8128: per-request Ethereum signatures</p>
+        <div class="space-y-3">
+          <div class="card-glow" style="padding:14px 18px">
+            <p class="text-[12px] font-bold mb-1">Every HTTP call is self-authenticating</p>
+            <p class="text-[11px]" style="color:var(--text-2)">Built on RFC 9421. Agent signs each request with its Ethereum key. Server verifies. No stored credentials, no sessions, stateless.</p>
+          </div>
+          <div class="card-glow" style="padding:14px 18px">
+            <p class="text-[12px] font-bold mb-1">Same identity across the entire stack</p>
+            <p class="text-[11px]" style="color:var(--text-2)">The address that signs the request is the same address registered on ERC-8004, the same address that pays via x402, the same address that builds reputation on ERC-8183 jobs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:var(--cyan-soft)">
+      <p class="text-[12px]" style="color:var(--text-2)"><strong style="color:var(--cyan)">One Ethereum address = identity + authentication + payment + reputation.</strong> ERC-8128 (authn) + ERC-8004 (discovery &amp; authz) + x402 (payment) + ERC-8183 (commerce). No separate credentials for each layer &mdash; one key does it all.</p>
+    </div>
+
+    <span class="slide-num">22 / 27</span>
+  </div>`,
+
+  /* SLIDE — Agent Wallets */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge" style="background:var(--cyan-soft);color:var(--cyan);border:1px solid var(--border)">WALLETS</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Key Management for Agents</span>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-2">How Do Agents Hold Keys?</h2>
+    <p class="text-base mb-6" style="color:var(--text-2)">Agents need wallets to sign transactions, authenticate, and pay. But they can't use MetaMask. The key management problem is open and evolving fast.</p>
+
+    <div class="grid grid-cols-3 gap-5 mb-6">
+      ${[
+        ["&#128274;", "Encrypted Keystores", "Keys encrypted at rest, decrypted in memory at runtime. Simple, battle-tested, but only as secure as the encryption key."],
+        ["&#128273;", "Hardware Wallets", "HSMs and hardware enclaves. Strongest guarantee &mdash; keys never leave the chip. For high-value agent operations."],
+        ["&#9729;&#65039;", "Cloud Secret Managers", "AWS KMS, GCP Secret Manager. Keys managed by cloud infra with access policies, audit logs, rotation."],
+      ].map(([icon, title, desc]) => `
+        <div class="card" style="padding:16px 20px;background:var(--bg-alt)">
+          <span class="text-lg block mb-2">${icon}</span>
+          <p class="text-[13px] font-bold mb-1">${title}</p>
+          <p class="text-[11px] leading-relaxed" style="color:var(--text-2)">${desc}</p>
+        </div>
+      `).join("")}
+    </div>
+
+    <div class="flex gap-5">
+      <div class="card flex-1" style="padding:16px 20px;background:var(--cyan-soft)">
+        <p class="text-[13px] font-bold mb-1" style="color:var(--cyan)">openwallet.sh</p>
+        <p class="text-[11px]" style="color:var(--text-2)">Open-source agent wallet framework. Designed for programmatic access &mdash; agents create, sign, and manage wallets without human interaction.</p>
+      </div>
+      <div class="card flex-1" style="padding:16px 20px;background:var(--bg-alt)">
+        <p class="text-[13px] font-bold mb-1">Emerging frameworks</p>
+        <p class="text-[11px]" style="color:var(--text-2)"><strong>varlock.dev</strong> &mdash; secret management for AI coding agents. <strong>mlld.ai</strong> &mdash; agent infrastructure toolkit. Both early but promising for the key management gap.</p>
+      </div>
+    </div>
+
+    <span class="slide-num">23 / 27</span>
+  </div>`,
+
+  /* SLIDE — Escrow Intro */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+    <div class="orb" style="width:500px;height:500px;background:var(--cyan-light);bottom:-200px;right:-100px;opacity:0.1"></div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-8183</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Escrow &amp; Settlement</span>
     </div>
 
     <h2 class="text-4xl font-bold mb-2">The Escrow Layer</h2>
@@ -594,7 +919,7 @@ export const slides = [
       `).join("")}
     </div>
 
-    <span class="slide-num">20 / 22</span>
+    <span class="slide-num">24 / 27</span>
   </div>`,
 
   /* SLIDE 21 — Escrow Code + Dispute */
@@ -602,6 +927,9 @@ export const slides = [
     <div class="topline"></div>
 
     <div class="flex-1">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-8183</span>
+      </div>
       <h2 class="text-3xl font-bold mb-6">Escrow Smart Contract</h2>
       <div class="card mono text-[12px] leading-[1.9]" style="background:var(--bg-alt)">
         <span style="color:var(--purple)">contract</span> <span style="color:var(--cyan)">AgentEscrow</span> {<br/>
@@ -637,10 +965,60 @@ export const slides = [
       <p class="mt-5 mono text-[9px]" style="color:var(--text-3)">Live: ChaosChain Genesis Studio (8004.org)</p>
     </div>
 
-    <span class="slide-num">21 / 22</span>
+    <span class="slide-num">25 / 27</span>
   </div>`,
 
-  /* SLIDE 22 — CLOSING */
+  /* SLIDE — ERC-5564: Privacy */
+  `<div class="flex flex-col justify-center w-full h-full relative" style="${PL}">
+    <div class="topline"></div>
+    <div class="orb" style="width:400px;height:400px;background:var(--purple);top:-150px;right:-100px;opacity:0.08"></div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge" style="background:var(--purple-soft);color:var(--purple);border:1px solid var(--border)">ERC-5564</span>
+      <span class="mono text-[10px]" style="color:var(--text-3)">Stealth Addresses &mdash; Co-authored by Vitalik</span>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-2">Privacy: Built for Machines</h2>
+    <p class="text-base mb-6" style="color:var(--text-2)">Ethereum is transparent by default. Every payment, salary, donation is public. ERC-5564 fixes that without mixers, without trusted third parties, without breaking composability.</p>
+
+    <div class="flex gap-6 mb-6">
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--text-3)">How stealth addresses work</p>
+        <div class="space-y-3">
+          <div class="card" style="padding:14px 18px;background:var(--bg-alt)">
+            <p class="text-[12px] font-bold mb-1">One-time addresses</p>
+            <p class="text-[11px]" style="color:var(--text-2)">Each payment generates a fresh address derived from elliptic curve math. Sender &amp; receiver are unlinkable on-chain. Non-interactive &mdash; no back-and-forth needed.</p>
+          </div>
+          <div class="card" style="padding:14px 18px;background:var(--bg-alt)">
+            <p class="text-[12px] font-bold mb-1">View tags + singleton announcer</p>
+            <p class="text-[11px]" style="color:var(--text-2)">Efficient scanning via view tags so recipients find their payments fast. A single announcer contract for discoverability across the network.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1">
+        <p class="mono text-[10px] tracking-[0.15em] uppercase mb-3" style="color:var(--cyan)">Why agents will love this</p>
+        <div class="space-y-3">
+          <div class="card-glow" style="padding:14px 18px">
+            <p class="text-[12px] font-bold mb-1">Privacy</p>
+            <p class="text-[11px]" style="color:var(--text-2)">Unlinkable by default. An agent's operator doesn't want every transaction publicly traceable. Competitors can't map spending patterns.</p>
+          </div>
+          <div class="card-glow" style="padding:14px 18px">
+            <p class="text-[12px] font-bold mb-1">Cost</p>
+            <p class="text-[11px]" style="color:var(--text-2)">Much cheaper than ZK mixer setups. Practical at micropayment scale where per-transaction privacy overhead matters.</p>
+          </div>
+          <div class="card-glow" style="padding:14px 18px">
+            <p class="text-[12px] font-bold mb-1">UX is the killer feature</p>
+            <p class="text-[11px]" style="color:var(--text-2)">Multiple keys, event scanning, fragmented balances &mdash; painful for humans, <strong>trivial for agents</strong>. Stealth addresses feel built for machines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span class="slide-num">26 / 27</span>
+  </div>`,
+
+  /* SLIDE — CLOSING */
   `<div class="flex flex-col items-center justify-center w-full h-full relative">
     <div class="orb" style="width:700px;height:700px;background:var(--cyan-light);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
     <div class="topline"></div>
@@ -655,7 +1033,7 @@ export const slides = [
       <span class="badge" style="background:var(--surface);color:var(--text-2);border:1px solid var(--border)">8004.org</span>
     </div>
 
-    <span class="slide-num">22 / 22</span>
+    <span class="slide-num">27 / 27</span>
   </div>`,
 
 ];
