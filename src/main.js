@@ -30,6 +30,36 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "End") goTo(allSlides.length - 1);
 });
 
+// Fullscreen toggle
+const fsBtn = document.getElementById("fullscreen-btn");
+const fsIcon = fsBtn.querySelector(".material-symbols-outlined");
+
+fsBtn.addEventListener("click", () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+});
+
+function scaleSlide() {
+  if (!document.fullscreenElement) return;
+  const scaleX = window.innerWidth / 1280;
+  const scaleY = window.innerHeight / 720;
+  const scale = Math.min(scaleX, scaleY);
+  document.documentElement.style.setProperty("--fs-scale", scale);
+}
+
+document.addEventListener("fullscreenchange", () => {
+  const fs = !!document.fullscreenElement;
+  document.body.classList.toggle("is-fullscreen", fs);
+  fsIcon.textContent = fs ? "fullscreen_exit" : "fullscreen";
+  if (fs) scaleSlide();
+  else document.documentElement.style.removeProperty("--fs-scale");
+});
+
+window.addEventListener("resize", scaleSlide);
+
 // Touch swipe support
 let touchStartX = 0;
 document.addEventListener("touchstart", (e) => {

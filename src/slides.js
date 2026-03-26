@@ -35,12 +35,12 @@ export const slides = [
      THE PAYMENTS FRICTION TIMELINE
      ============================================= */
 
-  /* SLIDE — It's Always Been About Removing Friction */
+  /* SLIDE — Why x402 Could Win */
   `<div class="flex flex-col w-full h-full relative" style="background:#f8f9fa;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
     <main style="position:relative;padding:48px 80px 44px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
       <!-- Header -->
       <div>
-        <h2 style="font-weight:800;font-size:36px;color:#191c1d;letter-spacing:-0.02em;line-height:1.1">Winning in Payments Has Always Been About<br/><span style="color:#006565">Removing Developer Friction</span></h2>
+        <h2 style="font-weight:800;font-size:36px;color:#191c1d;letter-spacing:-0.02em;line-height:1.1">Every Major Payments Shift<br/><span style="color:#006565">Removes a Layer of Friction</span></h2>
       </div>
 
       <!-- Timeline -->
@@ -49,83 +49,50 @@ export const slides = [
         <div style="position:absolute;top:50%;left:0;right:0;height:3px;background:linear-gradient(90deg,#bdc9c8,#006565);transform:translateY(-50%)"></div>
 
         <div style="display:flex;justify-content:space-between;align-items:center;position:relative">
-          <!-- Era 1: Pre-Stripe (1958–2010s) -->
-          <div style="display:flex;flex-direction:column;align-items:center;width:380px">
+          <!-- Era 1: Visa/Mastercard -->
+          <div style="display:flex;flex-direction:column;align-items:center;width:320px">
             <div style="background:#edeeef;border-radius:14px;padding:20px;width:100%;margin-bottom:16px">
-              <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#6e7979;margin-bottom:12px">1958 — 2010s · The fragmentation era</p>
-              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-                <!-- Visa -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <img src="/visa-logo.svg" alt="Visa" style="height:16px" />
-                </div>
-                <!-- Mastercard -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <svg width="20" height="12" viewBox="0 0 131.39 86.9" xmlns="http://www.w3.org/2000/svg"><circle cx="43.45" cy="43.45" r="43.45" fill="#EB001B"/><circle cx="87.94" cy="43.45" r="43.45" fill="#F79E1B"/><path d="M65.7 10.2a43.35 43.35 0 0 0-16.2 33.25 43.35 43.35 0 0 0 16.2 33.25 43.35 43.35 0 0 0 16.2-33.25A43.35 43.35 0 0 0 65.7 10.2z" fill="#FF5F00"/></svg>
-                  <span style="font-size:10px;font-weight:600;color:#191c1d">Mastercard</span>
-                </div>
-                <!-- PayPal -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <svg width="16" height="18" viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg"><path d="M20.1 7.4c.1-.7.1-1.4 0-2.1C19.4 2.1 16.5.5 12.5.5H4.6c-.5 0-1 .4-1.1.9L.5 22.9c-.1.4.3.8.7.8h5l1.3-8.1-.1.3c.1-.5.5-.9 1.1-.9h2.2c4.3 0 7.7-1.7 8.7-6.8.1-.2.1-.3.1-.5" fill="#27346A"/><path d="M9.7 7.5c.1-.3.2-.5.5-.7.1-.1.3-.1.5-.1h6.7c.8 0 1.5.1 2.2.2.2 0 .3.1.5.1.2 0 .3.1.5.1.1 0 .2 0 .2.1.2.1.4.1.5.2.1-.7.1-1.4 0-2.1C20.6 2.1 17.7.5 13.7.5H5.8c-.5 0-1 .4-1.1.9L1.7 22.9c-.1.4.3.8.7.8h5l1.3-8.1 1-8.1z" fill="#27346A"/><path d="M20.1 7.4c-1 5.1-4.4 6.8-8.7 6.8H9.2c-.5 0-1 .4-1.1.9l-1.5 9.5c-.1.4.2.7.6.7h4.2c.5 0 .9-.3.9-.8l1-5.3c.1-.5.5-.8.9-.8h.6c3.8 0 6.7-1.5 7.6-5.9.4-1.8.2-3.3-.7-4.4-.2-.3-.5-.5-.8-.7z" fill="#2790C3"/></svg>
-                  <span style="font-size:10px;font-weight:600;color:#003087">PayPal</span>
-                </div>
-                <!-- Amex -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <span style="font-size:10px;font-weight:800;color:#006FCF">AMEX</span>
-                </div>
-                <!-- Discover -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <span style="font-size:10px;font-weight:700;color:#FF6000">Discover</span>
-                </div>
-                <!-- ACH -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <span style="font-size:10px;font-weight:600;color:#6e7979">ACH</span>
-                </div>
-                <!-- iDEAL -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <span style="font-size:10px;font-weight:600;color:#CC0066">iDEAL</span>
-                </div>
-                <!-- SEPA -->
-                <div style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#ffffff;border-radius:8px;border:1px solid #edeeef">
-                  <span style="font-size:10px;font-weight:600;color:#003399">SEPA</span>
-                </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+                <img src="/visa-logo.svg" alt="Visa" style="height:18px" />
+                <span style="font-size:14px;color:#bdc9c8">/</span>
+                <svg width="28" height="18" viewBox="0 0 131.39 86.9" xmlns="http://www.w3.org/2000/svg"><circle cx="43.45" cy="43.45" r="43.45" fill="#EB001B"/><circle cx="87.94" cy="43.45" r="43.45" fill="#F79E1B"/><path d="M65.7 10.2a43.35 43.35 0 0 0-16.2 33.25 43.35 43.35 0 0 0 16.2 33.25 43.35 43.35 0 0 0 16.2-33.25A43.35 43.35 0 0 0 65.7 10.2z" fill="#FF5F00"/></svg>
               </div>
-              <p style="font-size:12px;color:#3e4949;line-height:1.5">Every merchant integrates <span style="font-weight:700;color:#191c1d">3–5 payment APIs</span> for their checkout. Different SDKs, different auth, different settlement.</p>
+              <p style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Acceptance friction</p>
+              <p style="font-size:12px;color:#3e4949;line-height:1.5">Made it possible to pay anywhere. Cards replaced cash and checks at scale.</p>
             </div>
             <!-- Timeline dot -->
             <div style="width:16px;height:16px;border-radius:50%;background:#6e7979;border:3px solid #f8f9fa;z-index:1"></div>
-            <p style="font-size:11px;font-weight:700;color:#6e7979;margin-top:8px">The Problem</p>
+            <p style="font-size:11px;font-weight:700;color:#6e7979;margin-top:8px">1958 — 2010s</p>
           </div>
 
-          <!-- Era 2: Stripe (2011) -->
-          <div style="display:flex;flex-direction:column;align-items:center;width:280px">
+          <!-- Era 2: Stripe -->
+          <div style="display:flex;flex-direction:column;align-items:center;width:320px">
             <div style="background:#ffffff;border-radius:14px;padding:20px;width:100%;margin-bottom:16px;border:1px solid #edeeef;position:relative;overflow:hidden">
               <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#635BFF"></div>
               <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;margin-top:4px">
                 <img src="/stripe-logo.svg" alt="Stripe" style="height:17px" />
-                <span style="font-size:10px;font-weight:600;color:#6e7979">2011</span>
               </div>
-              <p style="font-size:13px;font-weight:700;color:#191c1d;margin-bottom:6px">One API. Every rail.</p>
-              <p style="font-size:11px;color:#3e4949;line-height:1.5">7 lines of code replaced months of integration work. Stripe won by <span style="font-weight:600;color:#191c1d">removing developer friction</span>.</p>
+              <p style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Developer friction</p>
+              <p style="font-size:12px;color:#3e4949;line-height:1.5">7 lines of code replaced months of integration work.</p>
             </div>
             <!-- Timeline dot -->
             <div style="width:20px;height:20px;border-radius:50%;background:#635BFF;border:3px solid #f8f9fa;z-index:1"></div>
-            <p style="font-size:11px;font-weight:700;color:#635BFF;margin-top:8px">The Shift</p>
+            <p style="font-size:11px;font-weight:700;color:#635BFF;margin-top:8px">2011</p>
           </div>
 
-          <!-- Era 3: x402 (2026) -->
-          <div style="display:flex;flex-direction:column;align-items:center;width:280px">
+          <!-- Era 3: x402 -->
+          <div style="display:flex;flex-direction:column;align-items:center;width:320px">
             <div style="background:#ffffff;border-radius:14px;padding:20px;width:100%;margin-bottom:16px;border:1px solid #edeeef;position:relative;overflow:hidden">
               <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#006565,#008080)"></div>
               <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;margin-top:4px">
                 <span style="padding:3px 10px;background:#c2e7e6;border-radius:6px;font-size:12px;font-weight:700;color:#006565;font-family:'JetBrains Mono',monospace">x402</span>
-                <span style="font-size:10px;font-weight:600;color:#6e7979">2026</span>
               </div>
-              <p style="font-size:13px;font-weight:700;color:#006565;margin-bottom:6px">No API. No keys. No fees.</p>
-              <p style="font-size:11px;color:#3e4949;line-height:1.5">Open source, permissionless, <span style="font-weight:600;color:#006565">0% fees</span>. HTTP is the API. The wallet is the credential.</p>
+              <p style="font-size:14px;font-weight:700;color:#006565;margin-bottom:6px">Onboarding friction</p>
+              <p style="font-size:12px;color:#3e4949;line-height:1.5">No accounts, no API keys, no setup.</p>
             </div>
             <!-- Timeline dot -->
             <div style="width:20px;height:20px;border-radius:50%;background:#006565;border:3px solid #f8f9fa;z-index:1;box-shadow:0 0 12px rgba(0,101,101,0.4)"></div>
-            <p style="font-size:11px;font-weight:700;color:#006565;margin-top:8px">The Next Shift</p>
+            <p style="font-size:11px;font-weight:700;color:#006565;margin-top:8px">2026</p>
           </div>
         </div>
       </div>
@@ -135,7 +102,7 @@ export const slides = [
         <div style="background:#008080;padding:10px;border-radius:10px;flex-shrink:0">
           <span class="material-symbols-outlined" style="color:#e3fffe;font-size:20px">timeline</span>
         </div>
-        <p style="font-size:13px;color:#002020;flex:1">Every major payments shift was about <span style="font-weight:700;color:#006565">removing developer friction</span>. Stripe removed integration complexity. x402 removes API keys, fees, and permission entirely.</p>
+        <p style="font-size:14px;color:#002020;font-weight:500">Same pattern, next step.</p>
       </div>
     </main>
     <div style="position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgba(189,201,200,0.3)">
@@ -413,7 +380,7 @@ export const slides = [
                 <span class="material-symbols-outlined" style="font-size:20px">bolt</span>
               </div>
               <div>
-                <p style="font-weight:600;color:#191c1d;font-size:13px;margin-bottom:4px">Pay-per-API-call</p>
+                <p style="font-weight:600;color:#191c1d;font-size:13px;margin-bottom:4px">Pay-per-API-call without an API key</p>
                 <p style="color:#3e4949;font-size:11px;line-height:1.5">No subscriptions. Fractions of a cent per request — weather data, FX rates, LLM inference.</p>
               </div>
             </div>
@@ -469,13 +436,6 @@ export const slides = [
       <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;border-radius:50%;filter:blur(120px);background:linear-gradient(135deg,#c2e7e6,#f8f9fa);opacity:0.4;pointer-events:none"></div>
 
       <div style="position:relative;z-index:1;max-width:900px;display:flex;flex-direction:column;align-items:center">
-        <!-- Eyebrow -->
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
-          <div style="height:1px;width:32px;background:#bdc9c8"></div>
-          <span style="color:#006565;font-weight:700;letter-spacing:0.2em;font-size:14px;text-transform:uppercase">Section 03</span>
-          <div style="height:1px;width:32px;background:#bdc9c8"></div>
-        </div>
-
         <!-- Title -->
         <h1 style="font-weight:800;font-size:72px;color:#191c1d;letter-spacing:-0.04em;line-height:1;margin-bottom:32px">
           The Full <span style="color:#008080;font-style:italic">Stack</span>
