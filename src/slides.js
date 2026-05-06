@@ -1006,12 +1006,11 @@ export const slides = [
           <!-- Chain pills -->
           <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:12px;border-top:1px solid #edeeef">
             <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Base</span>
-            <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Solana</span>
+            <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Ethereum</span>
             <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Polygon</span>
             <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Avalanche</span>
-            <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Stellar</span>
-            <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Aptos</span>
-            <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Sei</span>
+            <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Arbitrum</span>
+            <span style="padding:3px 10px;background:#edeeef;border-radius:6px;font-size:10px;color:#6e7979;font-family:'JetBrains Mono',monospace">Optimism</span>
           </div>
         </div>
 
@@ -1476,3 +1475,203 @@ export const slides = [
 
 
 ];
+
+slides.splice(slides.length - 1, 0,
+  /* SLIDE - Practical Stack: From API to Agent Tool */
+  `<div class="flex flex-col w-full h-full relative" style="background:#f8f9fa;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    <main style="position:relative;padding:44px 80px 44px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+          <span style="display:inline-block;padding:4px 12px;background:#c2e7e6;color:#006565;font-size:11px;font-weight:700;letter-spacing:0.05em;border-radius:6px">PRACTICAL</span>
+          <span style="font-size:11px;color:#6e7979">How builders expose paid endpoints to agents</span>
+        </div>
+        <h2 style="font-weight:800;font-size:34px;color:#191c1d;letter-spacing:-0.02em;line-height:1.1">Turn Any API Into a Paid Agent Tool</h2>
+        <p style="font-size:14px;color:#3e4949;margin-top:6px">The resource stays normal HTTP. x402 adds a payment challenge in front of it.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin-top:24px">
+        <div style="background:#ffffff;padding:20px 18px;border-radius:14px;border:1px solid #edeeef;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#006565"></div>
+          <div style="width:32px;height:32px;border-radius:8px;background:#c2e7e6;display:flex;align-items:center;justify-content:center;margin-bottom:12px;margin-top:4px"><span class="material-symbols-outlined" style="color:#006565;font-size:18px">api</span></div>
+          <p style="font-size:13px;font-weight:700;color:#191c1d;margin-bottom:6px">1. Existing API</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5">Start with a route: inference, data, scraping, verification, storage, search, or any bounded service.</p>
+        </div>
+        <div style="background:#ffffff;padding:20px 18px;border-radius:14px;border:1px solid #edeeef;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#006565"></div>
+          <div style="width:32px;height:32px;border-radius:8px;background:#c2e7e6;display:flex;align-items:center;justify-content:center;margin-bottom:12px;margin-top:4px"><span class="material-symbols-outlined" style="color:#006565;font-size:18px">payments</span></div>
+          <p style="font-size:13px;font-weight:700;color:#191c1d;margin-bottom:6px">2. x402 Middleware</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5">Declare price, token, chain, recipient, method, and resource description.</p>
+        </div>
+        <div style="background:#ffffff;padding:20px 18px;border-radius:14px;border:1px solid #edeeef;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#006565"></div>
+          <div style="width:32px;height:32px;border-radius:8px;background:#c2e7e6;display:flex;align-items:center;justify-content:center;margin-bottom:12px;margin-top:4px"><span class="material-symbols-outlined" style="color:#006565;font-size:18px">verified</span></div>
+          <p style="font-size:13px;font-weight:700;color:#191c1d;margin-bottom:6px">3. Facilitator</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5">Verifies the signed payment and settles it onchain before the API response is released.</p>
+        </div>
+        <div style="background:#c2e7e6;padding:20px 18px;border-radius:14px;position:relative;overflow:hidden">
+          <div style="width:32px;height:32px;border-radius:8px;background:#008080;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><span class="material-symbols-outlined" style="color:#e3fffe;font-size:18px">smart_toy</span></div>
+          <p style="font-size:13px;font-weight:700;color:#006565;margin-bottom:6px">4. Agent Discovery</p>
+          <p style="font-size:11px;color:#002020;line-height:1.5">Expose OpenAPI, MCP tools, llms.txt, agent.json, or an x402 discovery registry.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:18px;margin-top:22px">
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:20px 22px">
+          <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#6e7979;margin-bottom:12px">Runtime flow</p>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#191c1d;background:#edeeef;padding:8px 10px;border-radius:8px">GET /tool</span>
+            <span class="material-symbols-outlined" style="color:#bdc9c8;font-size:16px">arrow_forward</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#006565;background:#c2e7e6;padding:8px 10px;border-radius:8px">402 price</span>
+            <span class="material-symbols-outlined" style="color:#bdc9c8;font-size:16px">arrow_forward</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#191c1d;background:#edeeef;padding:8px 10px;border-radius:8px">sign USDC</span>
+            <span class="material-symbols-outlined" style="color:#bdc9c8;font-size:16px">arrow_forward</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#006565;background:#c2e7e6;padding:8px 10px;border-radius:8px">200 result</span>
+          </div>
+        </div>
+        <div style="background:#edeeef;border-radius:14px;padding:20px 22px">
+          <p style="font-size:13px;font-weight:700;color:#191c1d;margin-bottom:6px">Key message</p>
+          <p style="font-size:12px;color:#3e4949;line-height:1.5">The endpoint does not need accounts, subscriptions, or API keys. The payment becomes part of the HTTP request/response loop.</p>
+        </div>
+      </div>
+    </main>
+    <div style="position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgba(189,201,200,0.2)"><div style="height:100%;background:#006565;width:96.5%"></div></div>
+  </div>`,
+
+  /* SLIDE - x402 Provider Landscape */
+  `<div class="flex flex-col w-full h-full relative" style="background:#f8f9fa;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    <main style="position:relative;padding:44px 80px 44px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+      <div>
+        <h2 style="font-weight:800;font-size:34px;color:#191c1d;letter-spacing:-0.02em;line-height:1.1">The x402 Provider Landscape</h2>
+        <p style="font-size:14px;color:#3e4949;margin-top:6px">Same protocol, different trust models. The choice is less about payments and more about control.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px;margin-top:22px">
+        <div style="background:#c2e7e6;padding:22px 20px;border-radius:14px;position:relative;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span class="material-symbols-outlined" style="color:#006565;font-size:22px">dns</span><p style="font-size:16px;font-weight:800;color:#006565">OpenFacilitator</p></div>
+          <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#006565;margin-bottom:10px">Open + self-hostable</p>
+          <p style="font-size:12px;color:#002020;line-height:1.5;margin-bottom:14px">Apache 2.0 facilitator stack. Run your own /verify, /settle, /supported, and /discovery/resources endpoints.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <span style="font-size:10px;color:#002020;background:rgba(255,255,255,0.45);padding:7px 8px;border-radius:8px">Self-host</span>
+            <span style="font-size:10px;color:#002020;background:rgba(255,255,255,0.45);padding:7px 8px;border-radius:8px">No vendor lock-in</span>
+            <span style="font-size:10px;color:#002020;background:rgba(255,255,255,0.45);padding:7px 8px;border-radius:8px">EVM chains</span>
+            <span style="font-size:10px;color:#002020;background:rgba(255,255,255,0.45);padding:7px 8px;border-radius:8px">Own domain</span>
+          </div>
+        </div>
+        <div style="background:#ffffff;padding:22px 20px;border-radius:14px;border:1px solid #edeeef;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#008080"></div>
+          <p style="font-size:15px;font-weight:800;color:#191c1d;margin-top:4px;margin-bottom:10px">Open-source, non-centralized solutions</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div><p style="font-size:12px;font-weight:700;color:#006565">OpenX402</p><p style="font-size:10px;color:#3e4949;line-height:1.45">Public facilitator positioned as no-login, no-KYC, Base-mainnet compatible.</p></div>
+            <div><p style="font-size:12px;font-weight:700;color:#006565">OpenFacilitator self-host</p><p style="font-size:10px;color:#3e4949;line-height:1.45">Run the facilitator under your own domain and infrastructure.</p></div>
+            <div><p style="font-size:12px;font-weight:700;color:#006565">Raw x402 SDK</p><p style="font-size:10px;color:#3e4949;line-height:1.45">Maximum neutrality, but teams own more chain/RPC operational complexity.</p></div>
+          </div>
+        </div>
+        <div style="background:#ffffff;padding:22px 20px;border-radius:14px;border:1px solid #edeeef;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#6e7979"></div>
+          <p style="font-size:15px;font-weight:800;color:#191c1d;margin-top:4px;margin-bottom:10px">Managed convenience layers</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div><p style="font-size:12px;font-weight:700;color:#191c1d">Coinbase CDP + Bazaar</p><p style="font-size:10px;color:#3e4949;line-height:1.45">Production facilitator plus discovery/search catalog for agents.</p></div>
+            <div><p style="font-size:12px;font-weight:700;color:#191c1d">Thirdweb Nexus</p><p style="font-size:10px;color:#3e4949;line-height:1.45">Hosted facilitator/router and agent tooling, authenticated by wallet/project secrets.</p></div>
+            <div><p style="font-size:12px;font-weight:700;color:#191c1d">PayAI</p><p style="font-size:10px;color:#3e4949;line-height:1.45">Managed facilitator option with EVM support and provider-operated infrastructure.</p></div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#edeeef;padding:18px 22px;border-radius:14px;margin-top:18px;display:flex;align-items:center;gap:16px">
+        <div style="background:#006565;padding:9px;border-radius:9px;flex-shrink:0"><span class="material-symbols-outlined" style="color:#e3fffe;font-size:20px">balance</span></div>
+        <p style="font-size:12px;color:#3e4949;line-height:1.5;flex:1"><span style="font-weight:700;color:#191c1d">Tradeoff:</span> managed providers are faster to demo, but open/self-hosted facilitators better match credible neutrality, privacy, and permissionless deployment.</p>
+      </div>
+    </main>
+    <div style="position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgba(189,201,200,0.2)"><div style="height:100%;background:#006565;width:97%"></div></div>
+  </div>`,
+
+  /* SLIDE - OpenX402 vs OpenFacilitator */
+  `<div class="flex flex-col w-full h-full relative" style="background:#f8f9fa;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    <main style="position:relative;padding:40px 72px 40px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+          <span style="display:inline-block;padding:4px 12px;background:#c2e7e6;color:#006565;font-size:11px;font-weight:700;letter-spacing:0.05em;border-radius:6px">FACILITATOR CHOICE</span>
+        </div>
+        <h2 style="font-weight:800;font-size:32px;color:#191c1d;letter-spacing:-0.02em;line-height:1.1">OpenX402 vs OpenFacilitator</h2>
+        <p style="font-size:13px;color:#3e4949;margin-top:6px">Both can be permissionless. That does not mean both are equally private.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px">
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:20px 22px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#008080"></div>
+          <p style="font-size:17px;font-weight:800;color:#006565;margin-top:4px;margin-bottom:8px">OpenX402</p>
+          <p style="font-size:12px;color:#3e4949;line-height:1.5;margin-bottom:14px">A public hosted facilitator you can point at without signup.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <p style="font-size:10px;color:#3e4949;line-height:1.35"><span style="font-weight:700;color:#191c1d">Runs by:</span> OpenX402 team</p>
+            <p style="font-size:10px;color:#3e4949;line-height:1.35"><span style="font-weight:700;color:#191c1d">Setup:</span> fastest</p>
+            <p style="font-size:10px;color:#3e4949;line-height:1.35"><span style="font-weight:700;color:#191c1d">Endpoint:</span> facilitator.openx402.ai</p>
+            <p style="font-size:10px;color:#3e4949;line-height:1.35"><span style="font-weight:700;color:#191c1d">Keys:</span> no signup/API keys</p>
+            <p style="font-size:10px;color:#3e4949;line-height:1.35"><span style="font-weight:700;color:#191c1d">Control:</span> low to medium</p>
+            <p style="font-size:10px;color:#3e4949;line-height:1.35"><span style="font-weight:700;color:#191c1d">Privacy:</span> hosted operator can see payment flow metadata</p>
+            <p style="font-size:10px;color:#3e4949;line-height:1.35"><span style="font-weight:700;color:#191c1d">Best for:</span> demos, tutorials, MVPs</p>
+          </div>
+        </div>
+
+        <div style="background:#c2e7e6;border-radius:14px;padding:20px 22px;position:relative;overflow:hidden">
+          <p style="font-size:17px;font-weight:800;color:#006565;margin-bottom:8px">OpenFacilitator</p>
+          <p style="font-size:12px;color:#002020;line-height:1.5;margin-bottom:14px">A project focused on hosted, custom-domain, or self-hosted facilitator infrastructure.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <p style="font-size:10px;color:#002020;line-height:1.35"><span style="font-weight:700;color:#006565">Runs by:</span> you, or hosted provider</p>
+            <p style="font-size:10px;color:#002020;line-height:1.35"><span style="font-weight:700;color:#006565">Setup:</span> fast hosted; more work self-hosted</p>
+            <p style="font-size:10px;color:#002020;line-height:1.35"><span style="font-weight:700;color:#006565">Endpoint:</span> pay.openfacilitator.io or your domain</p>
+            <p style="font-size:10px;color:#002020;line-height:1.35"><span style="font-weight:700;color:#006565">Keys:</span> free endpoint no account; paid features may use dashboard</p>
+            <p style="font-size:10px;color:#002020;line-height:1.35"><span style="font-weight:700;color:#006565">Control:</span> high when self-hosted</p>
+            <p style="font-size:10px;color:#002020;line-height:1.35"><span style="font-weight:700;color:#006565">Privacy:</span> self-hosting removes third-party facilitator logs</p>
+            <p style="font-size:10px;color:#002020;line-height:1.35"><span style="font-weight:700;color:#006565">Best for:</span> production control, branding, custom logic</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px">
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:18px 20px">
+          <p style="font-size:13px;font-weight:800;color:#191c1d;margin-bottom:8px">Permissionless is not private</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5">A hosted facilitator can observe amount, token, network, recipient, timing, settlement status, and any resource metadata included in the payment requirements. Self-hosting reduces that third-party data exposure, but on-chain settlement remains public.</p>
+        </div>
+        <div style="background:#edeeef;border-radius:14px;padding:18px 20px">
+          <p style="font-size:13px;font-weight:800;color:#191c1d;margin-bottom:8px">Adoption path</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5">Start with a public hosted facilitator for speed. Move to a hosted custom-domain setup for product control. Self-host when the facilitator layer becomes critical infrastructure.</p>
+        </div>
+      </div>
+    </main>
+    <div style="position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgba(189,201,200,0.2)"><div style="height:100%;background:#006565;width:97.25%"></div></div>
+  </div>`,
+
+  /* SLIDE - Recommended Path */
+  `<div class="flex flex-col w-full h-full relative" style="background:#f8f9fa;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    <main style="position:relative;padding:44px 80px 44px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px"><span style="display:inline-block;padding:4px 12px;background:#c2e7e6;color:#006565;font-size:11px;font-weight:700;letter-spacing:0.05em;border-radius:6px">IMPLEMENTATION PATH</span></div>
+        <h2 style="font-weight:800;font-size:34px;color:#191c1d;letter-spacing:-0.02em;line-height:1.1">Start Open: x402 + OpenFacilitator</h2>
+        <p style="font-size:14px;color:#3e4949;margin-top:6px">The strongest story is not "use this vendor." It is "run the payment layer yourself if you need to."</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px;flex:1">
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:22px 24px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#006565,#008080)"></div>
+          <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#006565;margin-bottom:14px;margin-top:4px">How a builder ships it</p>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:10px"><div style="width:22px;height:22px;border-radius:50%;background:#c2e7e6;color:#006565;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div><p style="font-size:12px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Protect one route</span> with x402 middleware and a price.</p></div>
+            <div style="display:flex;gap:10px"><div style="width:22px;height:22px;border-radius:50%;background:#c2e7e6;color:#006565;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div><p style="font-size:12px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Point it at OpenFacilitator</span> for verify and settle.</p></div>
+            <div style="display:flex;gap:10px"><div style="width:22px;height:22px;border-radius:50%;background:#c2e7e6;color:#006565;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div><p style="font-size:12px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Publish schemas</span> through OpenAPI, MCP, and discovery metadata.</p></div>
+            <div style="display:flex;gap:10px"><div style="width:22px;height:22px;border-radius:50%;background:#c2e7e6;color:#006565;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</div><p style="font-size:12px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Let an agent call it</span>, receive 402, pay, retry, and get the result.</p></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:22px 24px;flex:1">
+            <p style="font-size:13px;font-weight:700;color:#191c1d;margin-bottom:8px">Be honest about the tradeoffs</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <p style="font-size:11px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Operations:</span> someone must run RPC, keys, logs, uptime, and upgrades.</p>
+              <p style="font-size:11px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Privacy:</span> payment metadata can reveal what the agent is buying.</p>
+              <p style="font-size:11px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Discovery:</span> registries help agents, but no single registry should become mandatory.</p>
+              <p style="font-size:11px;color:#3e4949;line-height:1.45"><span style="font-weight:700;color:#191c1d">Fallback:</span> managed providers are useful when teams need speed over neutrality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#006565;padding:16px 22px;border-radius:14px;margin-top:18px">
+        <p style="font-size:14px;color:#e3fffe;line-height:1.45"><span style="font-weight:800">Positioning:</span> open x402 is the standard; OpenFacilitator is the practical self-hosted facilitator; Coinbase, Thirdweb, and PayAI are managed/productized routes for teams that want convenience.</p>
+      </div>
+    </main>
+    <div style="position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgba(189,201,200,0.2)"><div style="height:100%;background:#006565;width:97.5%"></div></div>
+  </div>`
+);
