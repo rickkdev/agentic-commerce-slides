@@ -1673,5 +1673,76 @@ slides.splice(slides.length - 1, 0,
       </div>
     </main>
     <div style="position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgba(189,201,200,0.2)"><div style="height:100%;background:#006565;width:97.5%"></div></div>
+  </div>`,
+
+  /* SLIDE - Finding Existing x402 Services */
+  `<div class="flex flex-col w-full h-full relative" style="background:#f8f9fa;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    <main style="position:relative;padding:42px 76px 42px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+          <span style="display:inline-block;padding:4px 12px;background:#c2e7e6;color:#006565;font-size:11px;font-weight:700;letter-spacing:0.05em;border-radius:6px">SERVICE DISCOVERY</span>
+          <span style="font-size:11px;color:#6e7979">How agents find payable APIs</span>
+        </div>
+        <h2 style="font-weight:800;font-size:32px;color:#191c1d;letter-spacing:-0.02em;line-height:1.1">Finding Existing x402 Services</h2>
+        <p style="font-size:13px;color:#3e4949;margin-top:6px">The protocol handles payment. Discovery tools answer a different question: what can the agent buy?</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:18px">
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#006565"></div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;margin-top:4px">
+            <span class="material-symbols-outlined" style="color:#006565;font-size:20px">storefront</span>
+            <p style="font-size:14px;font-weight:800;color:#191c1d">x402 Bazaar</p>
+          </div>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5;margin-bottom:10px">Coinbase/CDP discovery layer for payable APIs, metadata, pricing, quality signals, and MCP access.</p>
+          <p style="font-size:10px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">docs.cdp.coinbase.com/x402/bazaar</p>
+        </div>
+
+        <div style="background:#c2e7e6;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px">
+            <span class="material-symbols-outlined" style="color:#006565;font-size:20px">travel_explore</span>
+            <p style="font-size:14px;font-weight:800;color:#006565">OpenX402 catalog</p>
+          </div>
+          <p style="font-size:11px;color:#002020;line-height:1.5;margin-bottom:10px">Public hosted facilitator with automatic service registration and a discovery endpoint.</p>
+          <p style="font-size:10px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">https://facilitator.openx402.ai/discovery/resources</p>
+        </div>
+
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#008080"></div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;margin-top:4px">
+            <span class="material-symbols-outlined" style="color:#006565;font-size:20px">hub</span>
+            <p style="font-size:14px;font-weight:800;color:#191c1d">Named MCP entrypoints</p>
+          </div>
+          <p style="font-size:11px;color:#3e4949;line-height:1.45;margin-bottom:8px">MCP servers that expose discovery/payment tools directly to agents.</p>
+          <p style="font-size:9px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">api.cdp.coinbase.com/platform/v2/x402/discovery/mcp</p>
+          <p style="font-size:9px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">api.thirdweb.com/mcp?tools=listPayableServices</p>
+          <p style="font-size:9px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">npx -y @the402/mcp-server</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px">
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:18px">
+          <p style="font-size:13px;font-weight:800;color:#191c1d;margin-bottom:8px">Agora402</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5;margin-bottom:8px">Registry for x402-enabled agents. Returns endpoint URLs, categories, pricing, and payment details.</p>
+          <p style="font-size:10px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">https://agora402.io/api/v1/discover</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:18px">
+          <p style="font-size:13px;font-weight:800;color:#191c1d;margin-bottom:8px">x402.eco</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5;margin-bottom:8px">Ecosystem directory for facilitators, SDKs, services, and learning resources; useful as a broad map of the stack.</p>
+          <p style="font-size:10px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">https://www.x402.eco</p>
+        </div>
+        <div style="background:#ffffff;border:1px solid #edeeef;border-radius:14px;padding:18px">
+          <p style="font-size:13px;font-weight:800;color:#191c1d;margin-bottom:8px">x402.org ecosystem</p>
+          <p style="font-size:11px;color:#3e4949;line-height:1.5;margin-bottom:8px">Canonical ecosystem directory for services, facilitators, SDKs, integrations, and infrastructure projects.</p>
+          <p style="font-size:10px;color:#006565;font-family:'JetBrains Mono',monospace;line-height:1.35">https://www.x402.org/ecosystem</p>
+        </div>
+      </div>
+
+      <div style="background:#edeeef;border-radius:14px;padding:16px 20px;margin-top:14px;display:flex;align-items:center;gap:14px">
+        <div style="background:#006565;padding:8px;border-radius:8px;flex-shrink:0"><span class="material-symbols-outlined" style="color:#e3fffe;font-size:18px">schema</span></div>
+        <p style="font-size:12px;color:#3e4949;line-height:1.45;flex:1"><span style="font-weight:800;color:#191c1d">What agents need:</span> capability description, schema, price, network, token, recipient, facilitator compatibility, quality signals, and trust/reputation data.</p>
+      </div>
+    </main>
+    <div style="position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgba(189,201,200,0.2)"><div style="height:100%;background:#006565;width:98%"></div></div>
   </div>`
 );
